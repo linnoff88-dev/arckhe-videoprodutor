@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>videoprodutor — del enlace al video profesional, todo local</title>
+<meta content="El Productor: orquesta enlace/tema → video profesional de principio a fin (plan, guion, revisión, voz, imagen/SVG, render en 3 capas), 16:9 y 9:16, dark premium INEMA.CLUB, sin clave de API." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;display:block}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px 1fr;gap:16px;margin-bottom:26px}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+</style>
+<link href="https://inematds.github.io/videoprodutor/guia/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/videoprodutor/guia/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/videoprodutor/guia/es/" hreflang="es" rel="alternate"/></head>
+<body><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../en/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="./" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<nav><div class="wrap">
+<a class="brand" href="#top"><span class="emoji">🎬</span> videoprodutor</a>
+<span class="sep">|</span>
+<span class="clubpro">
+<a class="inema" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a>
+<span class="sep">-</span>
+<a class="pro" href="https://inema.pro" rel="noopener" target="_blank">PRO</a>
+</span>
+<div class="links">
+<a class="sec" href="#oque">Qué es</a>
+<a class="sec" href="#fluxo">Cómo funciona</a>
+<a class="sec" href="#guia">Guía de uso</a>
+<a class="sec" href="#exemplos">Ejemplos</a>
+<a class="sec" href="#roadmap">Hoja de ruta</a>
+<button aria-label="Alternar tema" class="tgl" id="themeToggle" title="Alternar tema">🌙</button>
+<a class="btn" href="https://github.com/inematds/videoprodutor" rel="noopener" target="_blank">GitHub</a>
+</div>
+</div></nav>
+<header class="hero" id="top">
+<div class="glow"></div>
+<div class="wrap">
+<div>
+<span class="chip">El Productor · video de principio a fin</span>
+<h1>Del enlace al <span class="amb">video profesional</span> — en una sola línea de producción.</h1>
+<p class="lead">Entra un enlace o tema; sale un video en 3 capas, narrado, en 16:9 y 9:16. Todo local, sin clave de API.</p>
+<div class="cta">
+<a class="btn" href="#guia">Empezar la guía</a>
+<a class="btn ghost" href="https://github.com/inematds/videoprodutor" rel="noopener" target="_blank">Ver en GitHub</a>
+</div>
+</div>
+<figure><img alt="Portada del productor de video — arte dark premium ámbar del orquestador de video de INEMA" src="../assets/hero.png"/></figure>
+</div>
+</header>
+<section id="oque"><div class="wrap">
+<span class="chip">Qué es</span>
+<h2>Un orquestador, no otro generador de video</h2>
+<p class="sub">El productor de video coordina las piezas que ya existen en el ecosistema —plan, guion, revisión de texto, voz, imagen, render— en una única línea de montaje. La skill es autocontenida: incluye el modelo probado del generador de 3 capas, destilado del caso de referencia "Hormozi 12 dicas".</p>
+<div class="grid g3">
+<div class="card"><h3>🎬 3 capas de verdad</h3><p>Cine (imagen con velo + parallax/ken-burns), texto cinético (GSAP) e ilustración del tema (ícono/diagrama/contador). Eso es lo que distingue un video profesional de una presentación de diapositivas.</p></div>
+<div class="card"><h3>🔌 Todo local, sin API key</h3><p>Kokoro para la voz, flux2-klein local para la imagen, HyperFrames (Chrome + FFmpeg) para el render. Si el servidor de imágenes está fuera de servicio, el modo SVG entra en acción automáticamente.</p></div>
+<div class="card"><h3>📱 16:9 y 9:16 en el mismo build</h3><p>El mismo generador produce ambos formatos; el vertical respeta las zonas seguras de las redes (la base y el lateral derecho quedan libres de la interfaz de la app).</p></div>
+</div>
+</div></section>
+<section id="fluxo"><div class="wrap">
+<span class="chip">Cómo funciona</span>
+<h2>La línea de montaje (siempre en este orden)</h2>
+<p class="sub">Cada etapa entrega un artefacto concreto para la siguiente. El array <code>AUDIO[]</code> — las duraciones reales de los WAV medidas por ffprobe — es la única fuente de timing: controla la escena, la animación y el audio al mismo tiempo.</p>
+<div class="flow">
+<span>Enlace / Tema</span><span class="arr">→</span>
+<span>Plan (vpe)</span><span class="arr">→</span>
+<span>Guion</span><span class="arr">→</span>
+<span>Revisión de texto</span><span class="arr">→</span>
+<span>Voz + timing</span><span class="arr">→</span>
+<span>Arte (imagen/SVG)</span><span class="arr">→</span>
+<span>Componer 3 capas</span><span class="arr">→</span>
+<span>Validar</span><span class="arr">→</span>
+<span>Render 16:9 + 9:16</span>
+</div>
+<div class="grid g3" style="margin-top:32px">
+<div class="card"><span class="num">1</span><h3>Capa de cine</h3><p>Fondo con profundidad: imagen generada con flux2-klein con velo oscuro + parallax/ken-burns. Es la capa que le da peso al cuadro.</p></div>
+<div class="card"><span class="num">2</span><h3>Texto cinético</h3><p>Número, título, barra y énfasis animados con GSAP. El movimiento viene del código: la imagen nunca necesita moverse por sí sola.</p></div>
+<div class="card"><span class="num">3</span><h3>Ilustración del tema</h3><p>Ícono, microdiagrama o contador que MUESTRA lo que se está narrando, en lugar de solo decorar la pantalla.</p></div>
+</div>
+<div class="grid g2" style="margin-top:16px">
+<div class="card"><h3>🖼️ La imagen es la opción predeterminada, SVG es el fallback</h3><p>El generador consulta <code>localhost:8000/health</code>: servidor en línea → flux2-klein; fuera de línea → íconos SVG animados por tema. Nunca se detiene por falta de imagen.</p></div>
+<div class="card"><h3>🗣️ Dos formas por frase</h3><p>Pantalla = PT-BR con acentos y el inglés con su escritura original. Voz (<code>txt/sN.txt</code>) = números/siglas expandidos y el inglés reescrito fonéticamente (<code>deploy</code> → "despliega").</p></div>
+</div>
+</div></section>
+<section id="pre"><div class="wrap">
+<span class="chip">Requisitos previos</span>
+<h2>La verificación previa antes de cualquier video</h2>
+<p class="sub">Node, FFmpeg, HyperFrames e internet durante el render (GSAP viene por CDN) son obligatorios. Kokoro es obligatorio para la voz. El servidor de imágenes y el <code>vpe</code> son opcionales; sin ellos, el pipeline sigue en modo SVG.</p>
+<div class="grid g3">
+<div class="card"><h3>🎞️ Motor de render</h3><p>HyperFrames verifica Chrome + FFmpeg. Obligatorio.</p><pre><span class="c"># comprueba el motor</span>
+<span class="k">npx hyperframes doctor</span></pre></div>
+<div class="card"><h3>🗣️ TTS local (Kokoro)</h3><p>Narración local con la voz <code>pf_dora</code>. Obligatorio para el audio.</p><pre><span class="c"># comprueba el TTS</span>
+<span class="k">python3 -c</span> <span class="s">"import kokoro_onnx, soundfile"</span></pre></div>
+<div class="card"><h3>🖼️ Servidor de imágenes</h3><p>flux2-klein en el puerto 8000 (capa 1). Opcional: tiene fallback SVG.</p><pre><span class="c"># opcional</span>
+<span class="k">curl -s</span> <span class="s">localhost:8000/health</span></pre></div>
+<div class="card"><h3>⚙️ Runtime y utilidades</h3><p>Node 22+, FFmpeg y el <code>vpe</code> ) en el PATH (video-plan-editor, opcional).</p><pre><span class="k">node -v</span>
+<span class="k">ffmpeg -version</span> | head -1
+<span class="k">which vpe</span></pre></div>
+</div>
+</div></section>
+<section id="guia"><div class="wrap">
+<span class="chip">Guía de uso · paso a paso</span>
+<h2>Del tema al MP4, en ocho pasos</h2>
+<p class="sub">Empieza de forma sencilla: una escena piloto, aprueba el estilo y solo entonces escala. Todos los comandos de abajo son los reales de la skill (<code>skills/videoprodutor/</code>).</p>
+<div class="step"><div class="b">1</div><div>
+<h3>Verificación previa</h3>
+<p>Confirma las dependencias antes de dedicar tiempo al guion.</p>
+<pre><span class="k">npx hyperframes doctor</span>                      <span class="c"># motor de renderizado (Chrome+FFmpeg)</span>
+<span class="k">curl -s</span> <span class="s">localhost:8000/health</span>               <span class="c"># imagen — opcional, tiene fallback SVG</span>
+<span class="k">python3 -c</span> <span class="s">"import kokoro_onnx, soundfile"</span>  <span class="c"># TTS local</span>
+<span class="k">node -v</span> ; <span class="k">ffmpeg -version</span> | head -1 ; <span class="k">which vpe</span></pre>
+</div></div>
+<div class="step"><div class="b">2</div><div>
+<h3>Plan de edición</h3>
+<p>O <code>vpe</code> arma el esqueleto (preset, beats, temas, CTA). Completa el JSON y valida.</p>
+<pre><span class="k">vpe scaffold</span> <span class="s">"&lt;assunto&gt;"</span> --preset &lt;suave|promo|vendas|viral|acao&gt; \
+    --title <span class="s">"&lt;título&gt;"</span> &gt; plano-edicao.json
+<span class="k">vpe validate</span>                                   <span class="c"># plano-edicao.json válido</span></pre>
+</div></div>
+<div class="step"><div class="b">3</div><div>
+<h3>Guion</h3>
+<p>Escribe el <code>SCRIPT.md</code> y un archivo de texto por escena. En la forma hablada, desarrolla los números y las siglas: "10×" se convierte en "diez veces", "R$500 mil" en "quinientos mil reales".</p>
+<pre><span class="c"># un txt por escena</span>
+SCRIPT.md
+assets/txt/s1.txt  assets/txt/s2.txt  ...  assets/txt/sN.txt</pre>
+</div></div>
+<div class="step"><div class="b">4</div><div>
+<h3>Revisión de texto (antes de la voz)</h3>
+<p>Revisa la acentuación palabra por palabra. Pantalla = PT-BR con acentos + inglés con su escritura original; voz = inglés fonético. Un acento incorrecto contamina la pantalla <em>e</em> la locución. Checklist y léxico en <code>references/revisao-texto.md</code>.</p>
+<pre><span class="c"># pantalla (capa 2 + caption): "hizo el deploy del funnel"</span>
+<span class="c"># voz (assets/txt/sN.txt):   "hizo el deplói del fánel"</span></pre>
+</div></div>
+<div class="step"><div class="b">5</div><div>
+<h3>Fuentes, voz y timing</h3>
+<p>Descarga las .woff2 la primera vez, genera los WAVs con Kokoro y mide las duraciones — se convierten en el array <code>AUDIO[]</code>, la única fuente de timing.</p>
+<pre><span class="k">node scripts/fetch-fonts.mjs</span>          <span class="c"># 1.ª vez: Sora/Inter/JetBrains</span>
+
+<span class="k">for</span> i in $(seq 1 N); <span class="k">do</span> npx hyperframes tts <span class="s">"assets/txt/s$i.txt"</span> \
+  --voice pf_dora --speed 0.98 --output <span class="s">"assets/audio/s$i.wav"</span>; <span class="k">done</span>
+
+<span class="k">for</span> i in $(seq 1 N); <span class="k">do</span> ffprobe -v error -show_entries format=duration \
+  -of default=noprint_wrappers=1:nokey=1 <span class="s">"assets/audio/s$i.wav"</span>; <span class="k">done</span>
+<span class="c"># → pega las duraciones en AUDIO[] del generador</span></pre>
+</div></div>
+<div class="step"><div class="b">6</div><div>
+<h3>Arte de la capa 1</h3>
+<p>Con el servidor en línea, genera las ilustraciones (seeds fijos = reproducibles). Sin servidor, se encarga el modo SVG. Revisa cada pieza: flux a veces mete texto en el cuadro.</p>
+<pre><span class="k">node scripts/gen-imgs.mjs</span>   <span class="c"># flux2-klein — o deja que el modo SVG se encargue</span></pre>
+</div></div>
+<div class="step"><div class="b">7</div><div>
+<h3>Componer las 3 capas y validar</h3>
+<p>Copia <code>scripts/composition-template.mjs</code> como <code>build-index.mjs</code> y ejecútalo. Sin flag, el modo es AUTO; <code>--svg</code>/<code>--noimg</code>/<code>--img</code> obligan. Valida antes del render costoso.</p>
+<pre><span class="k">node build-index.mjs</span>                  <span class="c"># 16:9 (AUTO imagen→SVG)</span>
+<span class="k">node build-index.mjs --vertical</span>       <span class="c"># 9:16 con zonas seguras</span>
+
+<span class="k">npx hyperframes lint</span>                  <span class="c"># 0 errores</span>
+<span class="k">npx hyperframes inspect --samples 16</span>  <span class="c"># 0 overflow</span>
+<span class="c"># revisa los frames de un borrador antes de renderizar</span></pre>
+</div></div>
+<div class="step"><div class="b">8</div><div>
+<h3>Render final en ambos formatos</h3>
+<p>Reconstruye y renderiza en cada formato. Como no puedes escuchar el audio desde aquí, pide al usuario que valide la locución.</p>
+<pre><span class="k">node build-index.mjs</span>            &amp;&amp; <span class="k">npx hyperframes render</span> --quality high \
+  --output <span class="s">renders/&lt;nome&gt;-16x9.mp4</span>
+<span class="k">node build-index.mjs --vertical</span> &amp;&amp; <span class="k">npx hyperframes render</span> --quality high \
+  --output <span class="s">renders/&lt;nome&gt;-9x16.mp4</span></pre>
+</div></div>
+</div></section>
+<section id="exemplos"><div class="wrap">
+<span class="chip">Ejemplos</span>
+<h2>El caso que se convirtió en el modelo</h2>
+<p class="sub">El video "Hormozi 12 dicas" (<code>videos/hormozi-12-dicas/</code>) es la referencia funcional de la que se destiló la skill: 15 escenas narradas con Kokoro, 3 capas, 16:9 y 9:16, que funcionan tanto con imagen como con el fallback SVG. El repo también guarda <code>experiments/remotion-ab/</code>, una prueba A/B a nivel de código de lo que la skill <code>remotion-best-practices</code> cambia en el resultado.</p>
+<div class="ex">
+<figure><img alt="Frame de apertura del video Hormozi 12 dicas — capa cinematográfica con velo oscuro" src="../assets/ex1.jpg"/><figcaption>Capa 1 (cine): arte del hook generado en flux2-klein con seed fijo, al que se le añade un velo + ken-burns durante el render.</figcaption></figure>
+<figure><img alt="Ilustración del tema del video Hormozi 12 dicas" src="../assets/ex2.jpg"/><figcaption>Capa 3 (ilustración del tema): el arte de uno de los 12 consejos — imagen fiel al concepto narrado, revisada una por una antes de incluirla.</figcaption></figure>
+</div>
+</div></section>
+<section id="roadmap"><div class="wrap">
+<span class="chip">Hoja de ruta</span>
+<h2>Dónde está y hacia dónde va</h2>
+<p class="sub">La skill está en v0.2.0 y ya produce video de principio a fin con el molde probado. El backlog completo, con las decisiones aún pendientes, está en <code>docs/06-decisoes-pendentes-e-backlog.md</code>.</p>
+<div class="phase"><div class="tag">Hecho</div><div class="d"><strong>v0.1.0 — la plantilla ejecutable</strong><span>Orquestador enlace/tema → video, autocontenido: 3 capas, imagen predeterminada con fallback SVG automático, zonas seguras en 9:16, timing desde una única fuente vía <code>AUDIO[]</code>.</span></div></div>
+<div class="phase"><div class="tag">Hecho</div><div class="d"><strong>v0.2.0 — revisión de texto</strong><span>Etapa de revisión entre el guion y la voz: contrato de dos formas por frase (pantalla × voz) y pronunciación de términos en inglés, para cerrar la brecha del texto que iba crudo al TTS.</span></div></div>
+<div class="phase"><div class="tag">P0</div><div class="d"><strong>Estructura de la fábrica</strong><span>Contrato único (<code>plano-edicao.json</code> extendido con caption cinético, ilustración por beat, duration_mode y assets), integrador de b-roll con caché de seed, compositor dirigido por plan.</span></div></div>
+<div class="phase"><div class="tag">P1</div><div class="d"><strong>Calidad de las capas 2 y 3</strong><span>Más componentes de texto cinético (typewriter, char-stagger, count-up), microdiagramas y spotlight, y un único sistema de diseño de tokens/eases/iconos.</span></div></div>
+<div class="phase"><div class="tag">P2</div><div class="d"><strong>Acabado</strong><span>Variedad de transiciones, light leaks y LUT real, sincronización musical con el ritmo, formato 1:1, posproducción y exportación a OpenTimelineIO.</span></div></div>
+<div class="phase"><div class="tag">Abierto</div><div class="d"><strong>Decisiones pendientes</strong><span>Motor de render a largo plazo (HyperFrames hoy × Remotion unificado), timing por palabra (forced alignment × estimación proporcional) y voz predeterminada.</span></div></div>
+</div></section>
+<footer>
+<div class="wrap">
+<div class="pill">Node 22+</div><div class="pill">HyperFrames</div><div class="pill">FFmpeg</div><div class="pill">GSAP</div><div class="pill">Kokoro TTS</div><div class="pill">flux2-klein</div>
+<p style="margin-top:18px">videoprodutor · el Productor: del enlace al video profesional, todo local ·
+      <a href="https://github.com/inematds/videoprodutor">inematds/videoprodutor</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+</div>
+</footer>
+<script>
+  (function(){
+    var KEY='videoprodutor-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; }
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      localStorage.setItem(KEY, light?'light':'dark');
+    });
+  })();
+</script>
+</body>
+</html>
