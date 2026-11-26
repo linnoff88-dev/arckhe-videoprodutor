@@ -61,10 +61,10 @@ Três decisões de método foram o que realmente fechou:
 | FFmpeg (6.1) | mede áudio / monta MP4 | `ffmpeg -version` | git-bash/Windows: usar `-nostdin` |
 | HyperFrames 0.6.80 | HTML→MP4 (Chrome+FFmpeg) | `npx hyperframes doctor` | render baixa **GSAP via CDN** → exige **internet no render** |
 | Kokoro TTS | narraçêo local | `python3 -c "import kokoro_onnx"` | 1ª vez ~340MB; voz `pf_dora` |
-| **inemaimg (servidor)** | gera imagens flux2-klein | `curl localhost:8000/health` → `status:ok` | **tem que estar no ar** (Docker/GPU). Elo mais frágil |
+| **ARCKHÉimg (servidor)** | gera imagens flux2-klein | `curl localhost:8000/health` → `status:ok` | **tem que estar no ar** (Docker/GPU). Elo mais frágil |
 | flux2-klein (modelo) | ilustraçêo | `curl localhost:8000/models` | às vezes mete **texto embaralhado** → conferir/regerar; evitar calendário/cupom/cards no prompt |
 | vpe (video-plan-editor) | plano/estratégia | `which vpe` | — |
-| skill `video-explicativo` | templates + house style | — | base (fontes, CSS dark premium, CTA INEMA) |
+| skill `video-explicativo` | templates + house style | — | base (fontes, CSS dark premium, CTA ARCKHÉ) |
 | GPU (DGX/GB10) | roda flux2 + kokoro | `nvidia-smi` | sem ela, geraçêo inviável |
 
 **Pré-flight (3 checagens antes de começar):**
@@ -76,12 +76,12 @@ python3 -c "import kokoro_onnx, soundfile"
 
 ### Política de fallback de imagem (regra)
 
-A geraçêo de imagem é **opcional, com fallback**. Se `curl -s localhost:8000/health` falhar (servidor inemaimg
+A geraçêo de imagem é **opcional, com fallback**. Se `curl -s localhost:8000/health` falhar (servidor ARCKHÉimg
 fora do ar, sem GPU, ou qualquer API de imagem indisponível), **nêo travar** — gerar as artes como **SVG**:
 
 - **Camada 3** (ícones/diagramas de tópico): **sempre pode ser SVG** (preferível — animável, leve, sem risco de
   texto embaralhado, determinístico/versionável).
-- **Camada 1** (fundo): com inemaimg/API → flux2-klein (look editorial 3D); sem ele → **fundo SVG flat/editorial**
+- **Camada 1** (fundo): com ARCKHÉimg/API → flux2-klein (look editorial 3D); sem ele → **fundo SVG flat/editorial**
   (formas + `linearGradient` + glow `feGaussianBlur`), no mesmo espírito visual.
 
 Assim o vídeo sai mesmo sem gerador de imagem. SVG nasce determinístico, nítido em qualquer resoluçêo, ~KB por arquivo,

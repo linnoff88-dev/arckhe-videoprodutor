@@ -1,7 +1,7 @@
 # 09 · Base de conhecimento — ediçêo profissional, efeitos e câmera
 
 > Mapa de **onde está o conhecimento** sobre como editar um vídeo profissionalmente
-> (linguagem de câmera, efeitos, motion, ritmo, prompting cinematográfico) espalhado
+> (linguagem de câmera, efeitos, motion, ritmo, prompting cARCKHÉtográfico) espalhado
 > pelos projetos do ecossistema. Use este doc como índice quando for planejar/dirigir
 > um vídeo novo.
 
@@ -15,14 +15,14 @@ A base mais completa. É o conhecimento que a skill `video-plan-editor` consome.
 | **Motion** | `motion/eases.md` · `motion/recipes.md` · `motion/textures.md` | Motion graphics premium: curvas de easing, receitas de animaçêo, texturas |
 | **Ritmo** | `pacing.md` | Pacing, cortes, ritmo de ediçêo |
 | **Planejamento** | `storyboard.md` · `render.md` | Storyboard e pipeline de render |
-| **Prompting** | `prompting/clip-direction.md` · `prompting/structures.md` · `prompting/library.md` · `prompting/best-practices.md` | Prompting cinematográfico para geradores de vídeo IA |
+| **Prompting** | `prompting/clip-direction.md` · `prompting/structures.md` · `prompting/library.md` · `prompting/best-practices.md` | Prompting cARCKHÉtográfico para geradores de vídeo IA |
 | **Estratégia** | `strategy/hooks.md` · `strategy/frameworks.md` · `strategy/formats.md` · `strategy/cases.md` · `strategy/matrix.md` · `strategy/checklist.md` · `strategy/templates.md` | Estratégia de vídeo viral / alta performance |
 | **Design** | `tokens.md` · `archetypes/` | Tokens de design e arquétipos de vídeo |
 
 ## 2. Gramática de direçêo — `diretor-animacao`
 
 - `~/.claude/skills/diretor-animacao/references/gramatica-direcao.md`
-  — Gramática cinematográfica aplicada: **18 movimentos de câmera**, framing from/to,
+  — Gramática cARCKHÉtográfica aplicada: **18 movimentos de câmera**, framing from/to,
   durações por beat, transições, look e parallax (para animar imagens prontas, sem IA de vídeo).
 - `~/projetos/diretor-animacao/DICAS-CORRECOES.md`
   — Lições práticas de render: frames pretos em fronteira (Remotion+WebGL),
@@ -35,9 +35,9 @@ A base mais completa. É o conhecimento que a skill `video-plan-editor` consome.
 - `~/projetos/mdd/skill/references/presets.md` — presets de direçêo (produto, imóvel, açêo…).
 - Instalada também em `~/.claude/skills/mestre-direcao-dinamica/references/`.
 
-## 4. Vocabulário cinematográfico — `promptprof`
+## 4. Vocabulário cARCKHÉtográfico — `promptprof`
 
-- `~/projetos/promptprof/kairoboost/vocabulario.md` — vocabulário cinematográfico
+- `~/projetos/promptprof/kairoboost/vocabulario.md` — vocabulário cARCKHÉtográfico
   para refino de prompts.
 - `~/projetos/promptprof/kairoboost/presets.md` — presets de estilo.
 - `~/projetos/promptprof/kairoboost/SYSTEM-PROMPT.md` — system prompt do refinador.

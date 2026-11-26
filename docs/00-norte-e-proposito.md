@@ -24,7 +24,7 @@ Isso define a **régua de qualidade** da fábrica:
 Os dois tipos usam a **mesma máquina**; mudam só:
 - **framework** (ex.: Hook-Value-CTA / PAS para venda; primeiro-princípio→avançado para ensino);
 - **ritmo** (viral/promo rápido × suave/institucional);
-- **CTA** (oferta × "continua em INEMA.CLUB").
+- **CTA** (oferta × "continua em ARCKHÉ AI").
 
 Logo, a fábrica tem **um pipeline** e **presets de saída**, nêo pipelines separados.
 

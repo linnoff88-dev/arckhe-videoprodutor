@@ -1,11 +1,11 @@
 // Gera as ilustrações de fundo (flux2-klein) — mesmo estilo (camada 1).
-// Uso: node gen-imgs.mjs   (servidor inemaimg em :8000)
+// Uso: node gen-imgs.mjs   (servidor ARCKHÉimg em :8000)
 import { generateImage } from "/home/nmaldaner/projetos/pixflow/skill/cli/genimg.mjs";
 
 const STYLE =
   "Flat editorial vector illustration, minimalist geometric shapes, dark navy background color 0D1321, " +
   "warm amber accent color FFC300 with subtle teal accents, premium fintech poster aesthetic, soft glow, " +
-  "cinematic depth, lots of empty negative space on the LEFT, subject placed on the RIGHT side, " +
+  "cARCKHÉtic depth, lots of empty negative space on the LEFT, subject placed on the RIGHT side, " +
   "NO text, no words, no letters, no typography, no numbers";
 
 const JOBS = [

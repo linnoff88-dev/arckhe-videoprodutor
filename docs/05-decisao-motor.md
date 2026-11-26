@@ -32,7 +32,7 @@ texto cinético; o shader de parallax do pixflow é portável para qualquer um d
 | Maturidade no setup do usuário | ✅ comprovado (3 skills, cursos, 12 projetos prontos, house style) | ⚠️ pixflow ainda alpha |
 | TTS Kokoro integrado | ✅ já plugado | ⚠️ plugar (fácil: gera WAV → `<Audio>`) |
 | Camadas 2/3 prontas | receitas GSAP (em HTML) | 54 componentes TSX (remotion-templates) |
-| Camada 1 (parallax cinema) | dá pra portar (canvas+GSAP) | já existe (pixflow) |
+| Camada 1 (parallax cARCKHÉ) | dá pra portar (canvas+GSAP) | já existe (pixflow) |
 | Estágio | produçêo | alpha (pixflow) + templates prontos |
 
 ## Argumentos honestos
@@ -41,7 +41,7 @@ texto cinético; o shader de parallax do pixflow é portável para qualquer um d
 **dado→componente** naturalmente (`inputProps`, `calculateMetadata`). Já tem pixflow (camada 1) + 54 templates
 (camadas 2/3). Custo: pagar maturidade (plugar Kokoro, tirar pixflow do alpha).
 
-**A favor do HyperFrames:** **já funciona**, já tem TTS, 12 vídeos prontos e identidade INEMA. É a base segura
+**A favor do HyperFrames:** **já funciona**, já tem TTS, 12 vídeos prontos e identidade ARCKHÉ. É a base segura
 para andar rápido. Custo: é mais "autoral por projeto" (menos paramétrico) — gerar a partir de spec exige
 montar um gerador de HTML.
 

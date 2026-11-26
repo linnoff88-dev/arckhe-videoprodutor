@@ -17,8 +17,8 @@ tela e pro TTS sem revisêo de acentuaçêo/ortografia).
 
 ## 0.1.0 — Release inicial
 - Orquestrador **link/assunto → vídeo profissional** ponta a ponta, reusando o ecossistema; autocontido
-  (traz o molde testado de 3 camadas). Tudo local, **sem chave de API**. 16:9 **e** 9:16, CTA INEMA.CLUB.
-- **3 camadas**: cinema (imagem flux2-klein com véu + parallax/ken-burns), texto cinético (GSAP),
+  (traz o molde testado de 3 camadas). Tudo local, **sem chave de API**. 16:9 **e** 9:16, CTA ARCKHÉ AI.
+- **3 camadas**: cARCKHÉ (imagem flux2-klein com véu + parallax/ken-burns), texto cinético (GSAP),
   ilustraçêo do tópico (ícone/diagrama/contador).
 - **Imagem é padrêo; SVG é fallback automático** (via `/health`); **safe zones no 9:16**; timing de
   fonte única (`AUDIO[]` via ffprobe).

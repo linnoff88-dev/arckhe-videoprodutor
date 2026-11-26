@@ -7,7 +7,7 @@
 2. **Timing de palavra** (para karaokê/keyword): **forced alignment** (whisperX/aeneas, preciso, +dependência)
    × **estimativa proporcional** (simples, barato) no v1.
 3. **video-explicativo:** continua renderer próprio (e empresta vocabulário) × é absorvido pelo motor único.
-4. **Voz padrêo:** Kokoro `pf_dora` (bella) grátis × inemavox clonada × ElevenLabs (pago).
+4. **Voz padrêo:** Kokoro `pf_dora` (bella) grátis × ARCKHÉvox clonada × ElevenLabs (pago).
 
 ## Backlog priorizado (quando começar a construir)
 
@@ -16,7 +16,7 @@
   + `duration_mode`, + presets por referência, + assets (imagem/seed/depth + áudio). Fundir com panels.json/movie spec.
 - **Orquestrador** `videoprodutor`: link/fonte → chama vpe → preenche o plano.
 - **Integrador de b-roll**: `gen_prompt` → flux2-klein (seed/cache). Base: `genimg.mjs` (pixflow).
-- **TTS**: roteiro → WAV (Kokoro/inemavox) + durações + timestamps.
+- **TTS**: roteiro → WAV (Kokoro/ARCKHÉvox) + durações + timestamps.
 - **Compositor**: plano → seleciona archetype/motion/tokens → monta a composiçêo no motor escolhido.
 
 ### P1 — qualidade (as camadas 2 e 3)
@@ -33,7 +33,7 @@
 
 ## Faxinas de consolidaçêo (do mapa do ecossistema)
 
-- **Tripé HyperFrames** (video-explicativo + demonstrativo + cursos-inema) → 1 motor com adaptadores de entrada.
+- **Tripé HyperFrames** (video-explicativo + demonstrativo + cursos-ARCKHÉ) → 1 motor com adaptadores de entrada.
 - **3 contratos → 1** (panels.json + movie spec + plano-edicao.json).
 - **seedance-loop-prompt** → preset "loop" do mdd (reduz duplicaçêo futura).
 - **Registro de presets único** (`presets.v1.json`) referenciado por todos.
@@ -42,16 +42,16 @@
 
 | Peça | Onde | Estado |
 |---|---|---|
-| Render cinema (parallax 2.5D + efeitos) | `~/projetos/pixflow/skill` | MVP funcional |
+| Render cARCKHÉ (parallax 2.5D + efeitos) | `~/projetos/pixflow/skill` | MVP funcional |
 | Legendas (embriêo) | `pixflow/skill/src/Caption.jsx` | básico (fade) |
-| Geraçêo de imagem | `pixflow/skill/cli/genimg.mjs` + `inemaimg` (flux2-klein) | funcional |
+| Geraçêo de imagem | `pixflow/skill/cli/genimg.mjs` + `ARCKHÉimg` (flux2-klein) | funcional |
 | Depth (sem torch) | `pixflow/skill/cli/depth.mjs` (transformers.js) | funcional |
 | Plano | `skill-video-plan-editor` (CLI `vpe`) | pronto |
 | Direçêo | `mdd` | pronto |
 | Prompt | `promptprof` (KairoBoost) | pronto |
 | Protótipo de pipeline | `fontefilm` (panels.json + caso Hormozi) | protótipo |
 | Componentes de motion | `remotion-templates` (54 TSX) | prontos |
-| Render flat + TTS | `cchyperframes` + `inemavox`/Kokoro | produçêo |
+| Render flat + TTS | `cchyperframes` + `ARCKHÉvox`/Kokoro | produçêo |
 
 ## Referências cruzadas
 

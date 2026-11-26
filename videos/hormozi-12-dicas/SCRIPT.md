@@ -1,6 +1,6 @@
 # SCRIPT — 12 Regras do Hormozi
 
-Formato: punchy / viral (preset vpe `viral`). 15 cenas: hook + 12 cards numerados + fecho + CTA INEMA.CLUB.
+Formato: punchy / viral (preset vpe `viral`). 15 cenas: hook + 12 cards numerados + fecho + CTA ARCKHÉ AI.
 Estilo: dark premium, accent âmbar. Card de dica = número gigante + título Sora + linha de essência.
 
 | # | Cena | Tela | Narraçêo (TTS, expandida) |
@@ -19,4 +19,4 @@ Estilo: dark premium, accent âmbar. Card de dica = número gigante + título So
 | 12 | 11 Enfrente o difícil | nº 11 | Onze: enfrente o difícil. O trabalho que você evita é justamente o que te mantém estagnado. |
 | 13 | 12 Lembrar > ensinar | nº 12 | Doze: lembrar vence ensinar. Você já sabe o que fazer. Revise as lições toda semana até virarem hábito. |
 | 14 | FECHO | síntese | Doze regras. Uma só verdade: execuçêo vence informaçêo. Escolha uma e comece hoje. |
-| 15 | CTA INEMA | INEMA.CLUB | Isso é conteúdo do INEMA ponto CLUB. Acesse: inema ponto club. |
+| 15 | CTA ARCKHÉ | ARCKHÉ AI | Isso é conteúdo do ARCKHÉ ponto CLUB. Acesse: ARCKHÉ ponto club. |

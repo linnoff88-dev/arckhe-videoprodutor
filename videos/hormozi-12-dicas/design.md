@@ -31,5 +31,5 @@ Regra: UM accent dominante (âmbar). Fundo idêntico em todas as cenas.
 - 16:9 → 1920×1080. 9:16 → 1080×1920 (overrides via `body.v` no gerador).
 - Sempre gerar AS DUAS versões por padrêo.
 
-## CTA final (INEMA.CLUB)
-"CONTINUA EM" + **INEMA.CLUB** (INEMA `--fg`, ".CLUB" `--accent`, glow drop-shadow) + `🌐 inema.club` (mono). Narraçêo: "Isso é conteúdo do INEMA ponto CLUB. Acesse: inema ponto club."
+## CTA final (ARCKHÉ AI)
+"CONTINUA EM" + **ARCKHÉ AI** (ARCKHÉ `--fg`, ".CLUB" `--accent`, glow drop-shadow) + `🌐 ARCKHÉ AI` (mono). Narraçêo: "Isso é conteúdo do ARCKHÉ ponto CLUB. Acesse: ARCKHÉ ponto club."

@@ -7,8 +7,8 @@ LINK / FONTE
    ↓  ENTENDER       extrai tema, dados, ângulo, objetivo
    ↓  PLANO          video-plan-editor → plano-edicao.json (roteiro, beats, tópicos, captions, CTA)
    ↓  DIREÇêO+IMG    mdd/promptprof (brief fiel ao conceito) → flux2-klein (imagem) [+ revisêo semântica]
-   ↓  VOZ+TIMING     inemavox/Kokoro (narraçêo) → durações + timestamps de palavra
-   ↓  RENDER         motor único: camada 1 (parallax/cinema) + camadas 2/3 (texto cinético + ilustraçêo)
+   ↓  VOZ+TIMING     ARCKHÉvox/Kokoro (narraçêo) → durações + timestamps de palavra
+   ↓  RENDER         motor único: camada 1 (parallax/cARCKHÉ) + camadas 2/3 (texto cinético + ilustraçêo)
    ↓                 timing de fonte única: durações do TTS governam cenas/texto/cortes
    VÍDEO PROFISSIONAL  (preset: propaganda | explicativo)
 ```
@@ -22,11 +22,11 @@ LINK / FONTE
 | Plano + estrutura + roteiro | **video-plan-editor** (`plano-edicao.json`) | ✅ reuso |
 | Direçêo de cena | **mdd** (storyboard, prompt final + negativo) | ✅ reuso |
 | Refino de prompt | **promptprof/KairoBoost** | ✅ reuso |
-| Imagem | **flux2-klein** (inemaimg) — helper `genimg.mjs` (pixflow) | ✅ reuso |
-| Voz + timing | **inemavox / Kokoro** (+ alignment/estimativa de palavra) | ✅ reuso |
+| Imagem | **flux2-klein** (ARCKHÉimg) — helper `genimg.mjs` (pixflow) | ✅ reuso |
+| Voz + timing | **ARCKHÉvox / Kokoro** (+ alignment/estimativa de palavra) | ✅ reuso |
 | Vocabulário/design (eases, tokens, ícones) | base do **video-explicativo / vpe** | ♻️ extrair p/ design system único |
 | Componentes de render (camadas 2/3) | **remotion-templates** (54 TSX) | ♻️ adaptar |
-| Render cinema (camada 1) | **pixflow-motion** | 🔧 aprimorar |
+| Render cARCKHÉ (camada 1) | **pixflow-motion** | 🔧 aprimorar |
 | Compositor (plano → composiçêo) | **videoprodutor** | 🆕 peça-chave |
 
 ## Composiçêo de uma cena (no Remotion, motor candidato)
@@ -38,7 +38,7 @@ LINK / FONTE
   ③ <ContentLayer>                                     ← camadas 2 e 3
        <Illustration kind="funil|seta|contador|bullets" progress/>   (camada 3 — remotion-templates)
        <KineticText caption timings accent/>                          (camada 2 — remotion-templates)
-  ④ <Audio src={narraçêo.wav}/>                        ← voz (Kokoro/inemavox)
+  ④ <Audio src={narraçêo.wav}/>                        ← voz (Kokoro/ARCKHÉvox)
 </Sequence>
 ```
 

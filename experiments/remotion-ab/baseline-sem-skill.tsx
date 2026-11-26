@@ -1,12 +1,12 @@
 // BASELINE — como sai SEM a skill (palpite "primeira tentativa CSS").
-// Brief: title card "INEMA" entra + subtítulo aparece embaixo (90f @30fps).
+// Brief: title card "ARCKHÉ" entra + subtítulo aparece embaixo (90f @30fps).
 // Problemas típicos: opacity por caractere, interpolate linear sem clamp,
 // transform com magic numbers, sem spring/fps, easing inexistente.
 import { useCurrentFrame, AbsoluteFill } from "remotion";
 
 export const TitleCard: React.FC = () => {
   const frame = useCurrentFrame();
-  const word = "INEMA";
+  const word = "ARCKHÉ";
 
   return (
     <AbsoluteFill style={{ background: "#0D1321", justifyContent: "center", alignItems: "center" }}>

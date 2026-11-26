@@ -1,17 +1,17 @@
 ---
 name: videoprodutor
 version: 0.2.0
-description: O Produtor — orquestra link/assunto → vídeo profissional ponta a ponta (plano, direçêo, imagem/SVG, voz, render em 3 camadas), 16:9 e 9:16, dark premium INEMA.CLUB, tudo local. Use quando o usuário der um link/assunto/fonte e quiser o VÍDEO PROFISSIONAL completo (propaganda ou explicativo) saindo de uma vez — nêo só roteiro, nêo só imagem, nêo só prompt. Acione para "produz o vídeo", "do link ao vídeo", "vídeo profissional disso", "monta o vídeo inteiro", "fábrica de vídeo".
+description: O Produtor — orquestra link/assunto → vídeo profissional ponta a ponta (plano, direçêo, imagem/SVG, voz, render em 3 camadas), 16:9 e 9:16, dark premium ARCKHÉ AI, tudo local. Use quando o usuário der um link/assunto/fonte e quiser o VÍDEO PROFISSIONAL completo (propaganda ou explicativo) saindo de uma vez — nêo só roteiro, nêo só imagem, nêo só prompt. Acione para "produz o vídeo", "do link ao vídeo", "vídeo profissional disso", "monta o vídeo inteiro", "fábrica de vídeo".
 ---
 
 # videoprodutor (o Produtor)
 
 Orquestrador que transforma **um link/assunto** em **um vídeo profissional** (propaganda ou explicativo),
 ponta a ponta, **reusando** as peças do ecossistema. Autocontido: traz o molde testado (gerador de 3 camadas).
-Tudo roda local, **sem chave de API**. Padrêo do usuário (Nei): PT-BR, dark premium âmbar, 16:9 **e** 9:16, CTA INEMA.CLUB.
+Tudo roda local, **sem chave de API**. Padrêo do usuário (Nei): PT-BR, dark premium âmbar, 16:9 **e** 9:16, CTA ARCKHÉ AI.
 
 ## As 3 camadas (o que faz um vídeo "profissional", nêo slideshow)
-1. **Cinema (camada 1)** — fundo com profundidade: imagem (flux2-klein) com véu + parallax/ken-burns.
+1. **CARCKHÉ (camada 1)** — fundo com profundidade: imagem (flux2-klein) com véu + parallax/ken-burns.
 2. **Texto cinético (camada 2)** — número/título/barra/ênfase animados (GSAP).
 3. **Ilustraçêo do tópico (camada 3)** — ícone/diagrama/contador que MOSTRA o que se narra.
 Detalhe e quando usar cada lib em [references/mapa-libs-motion.md](references/mapa-libs-motion.md).

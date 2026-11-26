@@ -10,9 +10,9 @@
 
 Orquestrador do ecossistema de vêÂ­deo: nêÂ£o reinventa render nem geraêÂ§êÂ£o ê¢â¬â **coordena as peêÂ§as que jêÂ¡ existem**
 (plano, roteiro, revisêÂ£o, voz, imagem, render) numa linha de montagem êÂºnica. Tudo roda **local, sem chave de API**.
-PadrêÂ£o: PT-BR, dark premium êÂ¢mbar, 16:9 **e** 9:16, CTA INEMA.CLUB.
+PadrêÂ£o: PT-BR, dark premium êÂ¢mbar, 16:9 **e** 9:16, CTA ARCKHÉ AI.
 
-ê°Å¸ââ **[Guia de uso completo ê¢â â](https://inematds.github.io/videoprodutor/guia/)**
+ê°Å¸ââ **[Guia de uso completo ê¢â â](https://linnoff88-dev.github.io/arckhe-/guia/)**
 
 ## A skill (fonte êÂºnica)
 
@@ -39,7 +39,7 @@ skills/videoprodutor/
 
 ## As 3 camadas
 
-1. **Cinema** ê¢â¬â fundo com profundidade: imagem (flux2-klein) com vêÂ©u + parallax/ken-burns.
+1. **CARCKHÉ** ê¢â¬â fundo com profundidade: imagem (flux2-klein) com vêÂ©u + parallax/ken-burns.
 2. **Texto cinêÂ©tico** ê¢â¬â nêÂºmero/têÂ­tulo/barra/êÂªnfase animados com GSAP.
 3. **IlustraêÂ§êÂ£o do têÂ³pico** ê¢â¬â êÂ­cone/diagrama/contador que MOSTRA o que se narra.
 
@@ -99,7 +99,7 @@ Backlog e decisêÂµes em aberto (motor a longo prazo, timing por palavra, vo
 
 ---
 
-[INEMA.CLUB](https://inema.club)
+[ARCKHÉ AI](https://ARCKHÉ AI)
 
 ---
 

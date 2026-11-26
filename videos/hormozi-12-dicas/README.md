@@ -1,7 +1,7 @@
 # 12 Regras do Hormozi — vídeo
 
 Primeiro vídeo produzido **sob o `videoprodutor`** (exemplo end-to-end da fábrica). Gerado pela skill
-`video-explicativo` (HyperFrames HTML→MP4 + TTS Kokoro local). Dark premium, accent âmbar, CTA INEMA.CLUB.
+`video-explicativo` (HyperFrames HTML→MP4 + TTS Kokoro local). Dark premium, accent âmbar, CTA ARCKHÉ AI.
 
 **v2 — as 3 camadas de movimento** (ver `docs/03` do projeto):
 - **Camada 1** — fundo ILUSTRADO por cena (flux2-klein, `assets/img/*.png`) + véu + parallax/ken-burns.
@@ -22,7 +22,7 @@ npx hyperframes render --quality high --output renders/<nome>.mp4
 ```
 Editar conteúdo: arrays `TIPS`/`CHIPS`/`CAPTIONS` em `build-index.mjs`. Narraçêo: `assets/txt/sN.txt`
 (regerar WAV com `npx hyperframes tts ... --voice pf_dora`). Timing vem de `AUDIO[]` (durações reais via ffprobe).
-Regerar as ilustrações: `node gen-imgs.mjs` (servidor inemaimg/flux2-klein em :8000; seeds fixos = reprodutível).
+Regerar as ilustrações: `node gen-imgs.mjs` (servidor ARCKHÉimg/flux2-klein em :8000; seeds fixos = reprodutível).
 
 ## Pipeline
 plano (`plano-edicao.json`, preset viral) → roteiro (`SCRIPT.md`) → TTS (`assets/audio/sN.wav`) →
@@ -33,7 +33,7 @@ composiçêo (`build-index.mjs`) → render (`renders/`).
 **0. Pré-flight — checar dependências (tudo local, sem chave de API):**
 ```bash
 npx hyperframes doctor                      # motor de render (Chrome+FFmpeg)
-curl -s localhost:8000/health               # servidor inemaimg/flux2-klein no ar? (precisa GPU) — elo mais frágil
+curl -s localhost:8000/health               # servidor ARCKHÉimg/flux2-klein no ar? (precisa GPU) — elo mais frágil
 python3 -c "import kokoro_onnx, soundfile"  # TTS Kokoro ok?
 node -v ; ffmpeg -version | head -1 ; which vpe
 ```
@@ -59,7 +59,7 @@ for i in $(seq 1 15); do ffprobe -v error -show_entries format=duration -of defa
 **5. Imagens (camada 1):** ajustar assuntos/seeds em `gen-imgs.mjs` e rodar `node gen-imgs.mjs`.
 **CONFERIR cada PNG** (flux às vezes mete texto embaralhado → regerar com outro seed; evitar calendário/cupom/cards no prompt).
 
-> **Fallback (regra):** se o servidor inemaimg/API de imagem **nêo** estiver no ar (`curl localhost:8000/health` falha),
+> **Fallback (regra):** se o servidor ARCKHÉimg/API de imagem **nêo** estiver no ar (`curl localhost:8000/health` falha),
 > **nêo travar** — usar **SVG** no lugar. Camada 3 (ícones/diagramas) sempre pode ser SVG; camada 1 (fundo) vira
 > SVG flat/editorial (formas + gradiente + glow). Ver `../../docs/07-caso-pipeline-funcional.md`.
 

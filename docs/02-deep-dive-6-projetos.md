@@ -19,7 +19,7 @@ Análise aprofundada de `mdd`, `fontefilm`, `promptprof`, `skill-video-plan-edit
 3. **As camadas 2 e 3 já existem prontas, em Remotion.** `remotion-templates` tem **54 componentes TSX**:
    texto cinético (typewriter, glitch, char-stagger, mask-reveal, text-highlight…), ilustraçêo de tópico
    (list/stagger, count-up, bar/charts, particle-explosion, progress-steps, lower-third, spotlight-reveal…)
-   e cinema (ken-burns, parallax-pan, film-burn, vignette, whip-pan…).
+   e cARCKHÉ (ken-burns, parallax-pan, film-burn, vignette, whip-pan…).
 
 4. **~70% da fábrica já existe.** O que falta é a cola (orquestrador, integrador de b-roll, compositor).
 
@@ -31,7 +31,7 @@ Análise aprofundada de `mdd`, `fontefilm`, `promptprof`, `skill-video-plan-edit
 | **fontefilm** | protótipo | extraçêo, storyboard, prompt | `direcao.md` + `panels.json` (id/seed/camera/prompt/narr); caso Hormozi pronto |
 | **promptprof** (KairoBoost) | pronto | prompt, presets | `SYSTEM-PROMPT.md` (diretor de arte) + `presets.md` (5 estilos) + `vocabulario.md` (lente/luz/cor/textura) |
 | **video-plan-editor** | pronto | input, estratégia, plano | `plano-edicao.json` + base de conhecimento (11 .md) + CLI `vpe` |
-| **remotion-templates** | pronto | texto cinético, ilustraçêo, cinema | **54 componentes TSX** (text/content/cinematic/transition/intro-outro/charts) |
+| **remotion-templates** | pronto | texto cinético, ilustraçêo, cARCKHÉ | **54 componentes TSX** (text/content/cARCKHÉtic/transition/intro-outro/charts) |
 | **cchyperframes** | pronto | render flat, narraçêo | motor HTML+GSAP→Chrome→FFmpeg; Kokoro TTS; 12 projetos prontos; house style |
 
 ## Base de conhecimento do vpe (`skill-video-plan-editor/knowledge/`)
@@ -41,14 +41,14 @@ Análise aprofundada de `mdd`, `fontefilm`, `promptprof`, `skill-video-plan-edit
 - **storyboard.md**: direçêo de cena (conflito visual, câmera por funçêo, continuidade, freeze final).
 - **prompting/**: `best-practices.md` (nota p/ Flux2-Klein), `structures.md` (Production Brief × Time-Coded Shotlist), `clip-direction.md` (prompt-final + negativo), `library.md`.
 - **motion/recipes.md**: snippets **GSAP determinísticos** — push-in, parallax+DOF, mask-reveal, char-stagger, pop, count-up, bar-grow, wipe-underline, whip-pan, knockout-text, distortion. + `eases.md`, `textures.md` (grêo 35mm, halaçêo feTurbulence).
-- **archetypes/**: cenas prontas (cinematic-hero, product-glint, reveal, offering, data-rise).
+- **archetypes/**: cenas prontas (cARCKHÉtic-hero, product-glint, reveal, offering, data-rise).
 - **tokens.md** (design system dark premium âmbar) + **pacing.md** (word-by-word, pattern interrupt, energia por preset).
 - exemplo pronto: `examples/exemplo-viral-pao.json`.
 
 ## KairoBoost (`promptprof/kairoboost/`)
 
-Sistema LLM-agnóstico conceito→prompt cinematográfico. `SYSTEM-PROMPT.md` (diretor de arte), `presets.md`
-(Cinematográfico, Editorial, Neon Noir, Corporate, Nostálgico — cada um mapeia lente/luz/cor/textura/modelo),
+Sistema LLM-agnóstico conceito→prompt cARCKHÉtográfico. `SYSTEM-PROMPT.md` (diretor de arte), `presets.md`
+(CARCKHÉtográfico, Editorial, Neon Noir, Corporate, Nostálgico — cada um mapeia lente/luz/cor/textura/modelo),
 `vocabulario.md` (dicionário visual). Aplicado em `hormozi-12/PROMPT-PLANEJAMENTO.md`.
 
 ## Sobreposições entre os 6

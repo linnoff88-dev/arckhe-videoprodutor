@@ -11,7 +11,7 @@
 |---|---|---|---|
 | **GSAP** | timeline/coreografia precisa, texto cinético, reveals, stagger, easing, intros SaaS, walkthroughs | 2 (texto cinético) | usar `paused`+seek (frame-determinístico). É o que já usamos. |
 | **D3** | dados viram conteúdo: gráficos animados, mapas, diagramas, dashboards, viz informativa | 3 (ilustraçêo de tópico) | "os dados sêo o conteúdo" — dar dados limpos + mensagem. Nosso chip/count-up é a versêo embriêo. |
-| **Three.js** | 3D: produto girando, fly-through, câmera orbital, visualizaçêo espacial | 1 (cinema) | **Vanilla Three.js > React-Three-Fiber** p/ render (menos abstraçêo, frame previsível). É o que o pixflow faz. |
+| **Three.js** | 3D: produto girando, fly-through, câmera orbital, visualizaçêo espacial | 1 (cARCKHÉ) | **Vanilla Three.js > React-Three-Fiber** p/ render (menos abstraçêo, frame previsível). É o que o pixflow faz. |
 | **Lottie** | ícone/microanimaçêo simples, onboarding, social clip, marca | 1/3 (ilustraçêo leve) | caminho mais rápido prompt→ícone limpo. **≈ nosso fallback SVG.** |
 | **Framer Motion** | UI interativa: hover, drag, layout, protótipo, demo | — | **NêO serve p/ vídeo renderizado** (depende de interaçêo). Fica fora do compositor. |
 
@@ -36,15 +36,15 @@
 |---|---|
 | **videoprodutor** (compositor) | a matriz acima = a lógica de "como realizar cada beat". |
 | **motor de render** | evidência pró-Remotion + determinismo; mas o mapa é agnóstico → escolhe só *onde hospedar* as libs. |
-| **pixflow** (camada 1) | valida Three.js vanilla + frame-determinismo; usar alpha render p/ exportar a cena cinema. |
+| **pixflow** (camada 1) | valida Three.js vanilla + frame-determinismo; usar alpha render p/ exportar a cena cARCKHÉ. |
 | **remotion-templates** | instalar Remotion Skills; expandir categorias seguindo a matriz (D3/Three/Lottie). |
 | **video-explicativo** (HyperFrames+GSAP) | GSAP/spring/start-simple já aplicam; como é HTML, pode **embutir D3/Three/Lottie** sem trocar de motor. SVG fallback = nicho do Lottie. |
 | **mdd** | técnica de motion path por imagem; matriz informa o motor por tomada. |
 | **promptprof/KairoBoost** | "como promptar por biblioteca" → presets de prompt (um por lib/uso). |
 | **vpe** | estender `motion/recipes.md` com matriz "lib por beat" (hoje só GSAP). |
 | **fontefilm** | adicionar beat tipo "viz/dados" (D3) ao contrato. |
-| **inemaimg** | imagem é input/textura (camada 1); movimento é código. Confirma "imagem padrêo, SVG fallback". |
-| **inemavox/Kokoro** | áudio é área das Remotion Skills; "timing vem do áudio" já alinhado. |
+| **ARCKHÉimg** | imagem é input/textura (camada 1); movimento é código. Confirma "imagem padrêo, SVG fallback". |
+| **ARCKHÉvox/Kokoro** | áudio é área das Remotion Skills; "timing vem do áudio" já alinhado. |
 
 ## A liçêo em uma linha
 O compositor que faltava ao videoprodutor ganha um **mapa pronto**: biblioteca certa por tipo de conteúdo, agnóstico de motor — D3 (dados), Three vanilla (3D), GSAP (texto/timeline), Lottie/SVG (ícone). Framer Motion fica de fora do render.

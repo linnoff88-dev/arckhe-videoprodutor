@@ -16,7 +16,7 @@ no Kokoro (ele fonemiza pela grafia escrita).
 
 1. **Acentuaçêo** — varrer **cada** palavra (á à â ê · é ê · í · ó ô õ · ú · ç · crase).
 2. **Ortografia / digitaçêo / concordância**.
-3. **Números/siglas/URLs (forma-fala)** — "10×"→"dez vezes"; "R$500 mil"→"quinhentos mil reais"; `inema.club`→"inema ponto club".
+3. **Números/siglas/URLs (forma-fala)** — "10×"→"dez vezes"; "R$500 mil"→"quinhentos mil reais"; `ARCKHÉ AI`→"ARCKHÉ ponto club".
 4. **Termos em inglês** — manter a grafia original **na tela**; na **forma-fala**, trocar pela grafia fonética (tabela abaixo). Na dúvida, **gerar um WAV de teste** e o usuário ouvir.
 
 ### Acentos que mais escapam (PT-BR)

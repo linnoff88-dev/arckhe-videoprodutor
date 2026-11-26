@@ -8,7 +8,7 @@ pixflow só tinha construído UMA.
 
 | Camada | O que é | video-explicativo | pixflow (no teste) |
 |---|---|---|---|
-| **1. Fundo (cinema)** | parallax, câmera, grade, grêo | ❌ chapado | ✅ **só isso** |
+| **1. Fundo (cARCKHÉ)** | parallax, câmera, grade, grêo | ❌ chapado | ✅ **só isso** |
 | **2. Texto cinético** | palavra a palavra, ênfase, destaque, escala | ✅ GSAP | ❌ um fade no bloco |
 | **3. Ilustraçêo do tópico** | ícones, números contando, barras, setas, bullets surgindo, diagramas | ✅ HTML/SVG/GSAP | ❌ nêo existe |
 

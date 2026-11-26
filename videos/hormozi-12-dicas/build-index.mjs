@@ -3,7 +3,7 @@
 //   Camada 1: fundo ILUSTRADO (flux2-klein) + véu + parallax/ken-burns
 //   Camada 2: texto cinético (número + título + barra + essência)
 //   Camada 3: ilustração de tópico — chip de dado (count-up / valor)
-// 15 cenas: hook + 12 cards + fecho + CTA INEMA.CLUB (fecho/CTA sem imagem).
+// 15 cenas: hook + 12 cards + fecho + CTA ARCKHÉ AI (fecho/CTA sem imagem).
 // Uso: node build-index.mjs (16:9) | node build-index.mjs --vertical (9:16).
 // ============================================================================
 import { writeFileSync, readFileSync } from "node:fs";
@@ -24,7 +24,7 @@ if (!NOIMG && !SVG && !FORCE_IMG) {
   else { SVG = true; console.log("[auto] servidor de imagem fora do ar → fallback SVG"); }
 }
 async function probeImg() {
-  const url = (process.env.INEMAIMG_URL || "http://localhost:8000") + "/health";
+  const url = (process.env.ARCKHÉIMG_URL || "http://localhost:8000") + "/health";
   try { const c = new AbortController(); const id = setTimeout(() => c.abort(), 2500);
     const r = await fetch(url, { signal: c.signal }); clearTimeout(id); return r.ok;
   } catch { return false; }
@@ -91,7 +91,7 @@ const CAPTIONS = [
   "Regra 11 — Enfrente o difícil",
   "Regra 12 — Lembrar vence ensinar",
   "Execução vence informação",
-  "Mais conteúdo em inema.club",
+  "Mais conteúdo em ARCKHÉ AI",
 ];
 
 function imgFor(i) {
@@ -158,9 +158,9 @@ function fecho() {
 function cta() {
   return `
     <div class="cta-eyebrow" id="s15-eye">CONTINUA EM</div>
-    <div class="cta-brand" id="s15-brand"><span class="b1">INEMA</span><span class="bdotsep">.</span><span class="b2">CLUB</span></div>
+    <div class="cta-brand" id="s15-brand"><span class="b1">ARCKHÉ</span><span class="bdotsep">.</span><span class="b2">CLUB</span></div>
     <div class="rule center" id="s15-rule"></div>
-    <div class="cta-url mono" id="s15-url"><span class="cta-globe">🌐</span>inema.club</div>
+    <div class="cta-url mono" id="s15-url"><span class="cta-globe">🌐</span>ARCKHÉ AI</div>
     <div class="reg tl" id="s15-r1"></div><div class="reg br" id="s15-r2"></div>`;
 }
 function sceneBody(i) {

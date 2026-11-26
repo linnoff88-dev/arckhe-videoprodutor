@@ -51,7 +51,7 @@ node build-index.mjs --vertical && npx hyperframes render --quality high --outpu
 | Internet no render | baixa GSAP via CDN | ✅ |
 | Kokoro TTS + GPU | narraçêo local | ✅ p/ voz |
 | vpe (video-plan-editor) | plano | ➖ opcional |
-| inemaimg :8000 + flux2-klein + GPU | imagem (camada 1) | ⚠️ opcional → fallback SVG |
+| ARCKHÉimg :8000 + flux2-klein + GPU | imagem (camada 1) | ⚠️ opcional → fallback SVG |
 
 Mínimo p/ um vídeo (modo SVG): Node + FFmpeg + HyperFrames + internet + Kokoro/GPU (voz).
 

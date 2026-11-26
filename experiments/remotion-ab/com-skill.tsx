@@ -25,7 +25,7 @@ export const TitleCard: React.FC = () => {
     <AbsoluteFill style={{ background: "#0D1321", justifyContent: "center", alignItems: "center" }}>
       {/* uma transform no bloco inteiro (sem opacity por caractere) */}
       <h1 style={{ fontSize: 120, fontWeight: 800, color: "#FFC300", opacity: titleOpacity, transform: `translateY(${titleY}px) scale(${0.9 + 0.1 * enter})` }}>
-        INEMA
+        ARCKHÉ
       </h1>
       <p style={{ fontSize: 32, color: "#748CAB", marginTop: 24, opacity: subOpacity, transform: `translateY(${subY}px)` }}>
         do texto ao vídeo

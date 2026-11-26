@@ -1,6 +1,6 @@
 # Teste A/B — Remotion Skills (mesmo brief, com × sem skill)
 
-Brief: title card "INEMA" entra + subtítulo aparece embaixo (90 frames @30fps).
+Brief: title card "ARCKHÉ" entra + subtítulo aparece embaixo (90 frames @30fps).
 Skill testada: `remotion-best-practices` (instalada via `npx skills add remotion-dev/skills`).
 
 > Obs: `remotion-templates` aqui **nêo é projeto Remotion executável** (sem node_modules/Root.tsx),
