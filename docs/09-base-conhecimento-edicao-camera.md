@@ -1,4 +1,4 @@
-# 09 · Base de conhecimento — edição profissional, efeitos e câmera
+# 09 · Base de conhecimento — ediçêo profissional, efeitos e câmera
 
 > Mapa de **onde está o conhecimento** sobre como editar um vídeo profissionalmente
 > (linguagem de câmera, efeitos, motion, ritmo, prompting cinematográfico) espalhado
@@ -12,14 +12,14 @@ A base mais completa. É o conhecimento que a skill `video-plan-editor` consome.
 | Área | Arquivos | O que cobre |
 |---|---|---|
 | **Câmera** | `camera/vocabulary.md` | Linguagem de câmera: vocabulário de movimentos e enquadramentos |
-| **Motion** | `motion/eases.md` · `motion/recipes.md` · `motion/textures.md` | Motion graphics premium: curvas de easing, receitas de animação, texturas |
-| **Ritmo** | `pacing.md` | Pacing, cortes, ritmo de edição |
+| **Motion** | `motion/eases.md` · `motion/recipes.md` · `motion/textures.md` | Motion graphics premium: curvas de easing, receitas de animaçêo, texturas |
+| **Ritmo** | `pacing.md` | Pacing, cortes, ritmo de ediçêo |
 | **Planejamento** | `storyboard.md` · `render.md` | Storyboard e pipeline de render |
 | **Prompting** | `prompting/clip-direction.md` · `prompting/structures.md` · `prompting/library.md` · `prompting/best-practices.md` | Prompting cinematográfico para geradores de vídeo IA |
 | **Estratégia** | `strategy/hooks.md` · `strategy/frameworks.md` · `strategy/formats.md` · `strategy/cases.md` · `strategy/matrix.md` · `strategy/checklist.md` · `strategy/templates.md` | Estratégia de vídeo viral / alta performance |
 | **Design** | `tokens.md` · `archetypes/` | Tokens de design e arquétipos de vídeo |
 
-## 2. Gramática de direção — `diretor-animacao`
+## 2. Gramática de direçêo — `diretor-animacao`
 
 - `~/.claude/skills/diretor-animacao/references/gramatica-direcao.md`
   — Gramática cinematográfica aplicada: **18 movimentos de câmera**, framing from/to,
@@ -28,11 +28,11 @@ A base mais completa. É o conhecimento que a skill `video-plan-editor` consome.
   — Lições práticas de render: frames pretos em fronteira (Remotion+WebGL),
   fantasma 2.5D, crossfade sobre preto.
 
-## 3. Biblioteca de tomadas — `mdd` (Mestre de Direção Dinâmica)
+## 3. Biblioteca de tomadas — `mdd` (Mestre de Direçêo Dinâmica)
 
 - `~/projetos/mdd/skill/references/biblioteca-tomadas.md` — biblioteca de tomadas
-  (câmera + ação + continuidade) para vídeo dinâmico.
-- `~/projetos/mdd/skill/references/presets.md` — presets de direção (produto, imóvel, ação…).
+  (câmera + açêo + continuidade) para vídeo dinâmico.
+- `~/projetos/mdd/skill/references/presets.md` — presets de direçêo (produto, imóvel, açêo…).
 - Instalada também em `~/.claude/skills/mestre-direcao-dinamica/references/`.
 
 ## 4. Vocabulário cinematográfico — `promptprof`
@@ -44,7 +44,7 @@ A base mais completa. É o conhecimento que a skill `video-plan-editor` consome.
 
 ## 5. Neste repo — `skill-videoprodutor/docs/`
 
-Mais arquitetura da fábrica do que técnica de edição, mas complementa:
+Mais arquitetura da fábrica do que técnica de ediçêo, mas complementa:
 
 - `03-camadas-de-movimento.md` — as camadas de movimento de um vídeo profissional.
 - `08-mapa-libs-motion.md` — mapa de libs de motion/efeitos

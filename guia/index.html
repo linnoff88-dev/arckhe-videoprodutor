@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>videoprodutor — do link ao vídeo profissional, tudo local</title>
-<meta content="O Produtor: orquestra link/assunto → vídeo profissional ponta a ponta (plano, roteiro, revisão, voz, imagem/SVG, render em 3 camadas), 16:9 e 9:16, dark premium INEMA.CLUB, sem chave de API." name="description"/>
+<meta content="O Produtor: orquestra link/assunto → vídeo profissional ponta a ponta (plano, roteiro, revisêo, voz, imagem/SVG, render em 3 camadas), 16:9 e 9:16, dark premium INEMA.CLUB, sem chave de API." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
@@ -128,10 +128,10 @@
 </header>
 <section id="oque"><div class="wrap">
 <span class="chip">O que é</span>
-<h2>Um orquestrador, não mais um gerador de vídeo</h2>
-<p class="sub">O videoprodutor coordena as peças que já existem no ecossistema — plano, roteiro, revisão de texto, voz, imagem, render — numa linha de montagem única. A skill é autocontida: traz o molde testado do gerador de 3 camadas, destilado do caso de referência "Hormozi 12 dicas".</p>
+<h2>Um orquestrador, nêo mais um gerador de vídeo</h2>
+<p class="sub">O videoprodutor coordena as peças que já existem no ecossistema — plano, roteiro, revisêo de texto, voz, imagem, render — numa linha de montagem única. A skill é autocontida: traz o molde testado do gerador de 3 camadas, destilado do caso de referência "Hormozi 12 dicas".</p>
 <div class="grid g3">
-<div class="card"><h3>🎬 3 camadas de verdade</h3><p>Cinema (imagem com véu + parallax/ken-burns), texto cinético (GSAP) e ilustração do tópico (ícone/diagrama/contador). É o que separa vídeo profissional de slideshow.</p></div>
+<div class="card"><h3>🎬 3 camadas de verdade</h3><p>Cinema (imagem com véu + parallax/ken-burns), texto cinético (GSAP) e ilustraçêo do tópico (ícone/diagrama/contador). É o que separa vídeo profissional de slideshow.</p></div>
 <div class="card"><h3>🔌 Tudo local, sem API key</h3><p>Kokoro para a voz, flux2-klein local para a imagem, HyperFrames (Chrome + FFmpeg) para o render. Se o servidor de imagem estiver fora, o modo SVG assume sozinho.</p></div>
 <div class="card"><h3>📱 16:9 e 9:16 no mesmo build</h3><p>O mesmo gerador emite os dois formatos; o vertical respeita as safe zones das redes (base e lateral direita livres da UI do app).</p></div>
 </div>
@@ -139,12 +139,12 @@
 <section id="fluxo"><div class="wrap">
 <span class="chip">Como funciona</span>
 <h2>A linha de montagem (sempre nesta ordem)</h2>
-<p class="sub">Cada etapa entrega um artefato concreto para a seguinte. O array <code>AUDIO[]</code> — as durações reais dos WAVs medidas pelo ffprobe — é a fonte única de timing: governa cena, animação e áudio ao mesmo tempo.</p>
+<p class="sub">Cada etapa entrega um artefato concreto para a seguinte. O array <code>AUDIO[]</code> — as durações reais dos WAVs medidas pelo ffprobe — é a fonte única de timing: governa cena, animaçêo e áudio ao mesmo tempo.</p>
 <div class="flow">
 <span>Link / Assunto</span><span class="arr">→</span>
 <span>Plano (vpe)</span><span class="arr">→</span>
 <span>Roteiro</span><span class="arr">→</span>
-<span>Revisão de texto</span><span class="arr">→</span>
+<span>Revisêo de texto</span><span class="arr">→</span>
 <span>Voz + timing</span><span class="arr">→</span>
 <span>Arte (imagem/SVG)</span><span class="arr">→</span>
 <span>Compor 3 camadas</span><span class="arr">→</span>
@@ -154,21 +154,21 @@
 <div class="grid g3" style="margin-top:32px">
 <div class="card"><span class="num">1</span><h3>Camada cinema</h3><p>Fundo com profundidade: imagem gerada no flux2-klein com véu escuro + parallax/ken-burns. É a camada que dá peso ao quadro.</p></div>
 <div class="card"><span class="num">2</span><h3>Texto cinético</h3><p>Número, título, barra e ênfase animados com GSAP. O movimento vem do código — a imagem nunca precisa se mexer sozinha.</p></div>
-<div class="card"><span class="num">3</span><h3>Ilustração do tópico</h3><p>Ícone, micro-diagrama ou contador que MOSTRA o que está sendo narrado, em vez de só decorar a tela.</p></div>
+<div class="card"><span class="num">3</span><h3>Ilustraçêo do tópico</h3><p>Ícone, micro-diagrama ou contador que MOSTRA o que está sendo narrado, em vez de só decorar a tela.</p></div>
 </div>
 <div class="grid g2" style="margin-top:16px">
-<div class="card"><h3>🖼️ Imagem é o padrão, SVG é o fallback</h3><p>O gerador consulta <code>localhost:8000/health</code>: servidor no ar → flux2-klein; fora → ícones SVG animados por tema. Nunca trava por falta de imagem.</p></div>
+<div class="card"><h3>🖼️ Imagem é o padrêo, SVG é o fallback</h3><p>O gerador consulta <code>localhost:8000/health</code>: servidor no ar → flux2-klein; fora → ícones SVG animados por tema. Nunca trava por falta de imagem.</p></div>
 <div class="card"><h3>🗣️ Duas formas por frase</h3><p>Tela = PT-BR acentuado com o inglês na grafia original. Fala (<code>txt/sN.txt</code>) = números/siglas expandidos e o inglês reescrito foneticamente (<code>deploy</code> → "deplói").</p></div>
 </div>
 </div></section>
 <section id="pre"><div class="wrap">
 <span class="chip">Pré-requisitos</span>
 <h2>O pré-flight antes de qualquer vídeo</h2>
-<p class="sub">Node, FFmpeg, HyperFrames e internet no render (o GSAP vem por CDN) são obrigatórios. Kokoro é obrigatório para a voz. O servidor de imagem e o <code>vpe</code> são opcionais — sem eles o pipeline segue no modo SVG.</p>
+<p class="sub">Node, FFmpeg, HyperFrames e internet no render (o GSAP vem por CDN) sêo obrigatórios. Kokoro é obrigatório para a voz. O servidor de imagem e o <code>vpe</code> sêo opcionais — sem eles o pipeline segue no modo SVG.</p>
 <div class="grid g3">
 <div class="card"><h3>🎞️ Motor de render</h3><p>HyperFrames verifica Chrome + FFmpeg. Obrigatório.</p><pre><span class="c"># checa o motor</span>
 <span class="k">npx hyperframes doctor</span></pre></div>
-<div class="card"><h3>🗣️ TTS local (Kokoro)</h3><p>Narração local com a voz <code>pf_dora</code>. Obrigatório para o áudio.</p><pre><span class="c"># checa o TTS</span>
+<div class="card"><h3>🗣️ TTS local (Kokoro)</h3><p>Narraçêo local com a voz <code>pf_dora</code>. Obrigatório para o áudio.</p><pre><span class="c"># checa o TTS</span>
 <span class="k">python3 -c</span> <span class="s">"import kokoro_onnx, soundfile"</span></pre></div>
 <div class="card"><h3>🖼️ Servidor de imagem</h3><p>flux2-klein na porta 8000 (camada 1). Opcional — tem fallback SVG.</p><pre><span class="c"># opcional</span>
 <span class="k">curl -s</span> <span class="s">localhost:8000/health</span></pre></div>
@@ -180,7 +180,7 @@
 <section id="guia"><div class="wrap">
 <span class="chip">Guia de uso · passo a passo</span>
 <h2>Do assunto ao MP4, em oito passos</h2>
-<p class="sub">Comece simples: uma cena-piloto, aprove o estilo, só então escale. Todos os comandos abaixo são os reais da skill (<code>skills/videoprodutor/</code>).</p>
+<p class="sub">Comece simples: uma cena-piloto, aprove o estilo, só entêo escale. Todos os comandos abaixo sêo os reais da skill (<code>skills/videoprodutor/</code>).</p>
 <div class="step"><div class="b">1</div><div>
 <h3>Pré-flight</h3>
 <p>Confirme as dependências antes de gastar tempo com roteiro.</p>
@@ -190,7 +190,7 @@
 <span class="k">node -v</span> ; <span class="k">ffmpeg -version</span> | head -1 ; <span class="k">which vpe</span></pre>
 </div></div>
 <div class="step"><div class="b">2</div><div>
-<h3>Plano de edição</h3>
+<h3>Plano de ediçêo</h3>
 <p>O <code>vpe</code> monta o esqueleto (preset, beats, tópicos, CTA). Preencha o JSON e valide.</p>
 <pre><span class="k">vpe scaffold</span> <span class="s">"&lt;assunto&gt;"</span> --preset &lt;suave|promo|vendas|viral|acao&gt; \
     --title <span class="s">"&lt;título&gt;"</span> &gt; plano-edicao.json
@@ -204,8 +204,8 @@ SCRIPT.md
 assets/txt/s1.txt  assets/txt/s2.txt  ...  assets/txt/sN.txt</pre>
 </div></div>
 <div class="step"><div class="b">4</div><div>
-<h3>Revisão de texto (antes da voz)</h3>
-<p>Varra a acentuação palavra a palavra. Tela = PT-BR acentuado + inglês na grafia original; fala = inglês foneticamente. Acento errado contamina a tela <em>e</em> a locução. Checklist e léxico em <code>references/revisao-texto.md</code>.</p>
+<h3>Revisêo de texto (antes da voz)</h3>
+<p>Varra a acentuaçêo palavra a palavra. Tela = PT-BR acentuado + inglês na grafia original; fala = inglês foneticamente. Acento errado contamina a tela <em>e</em> a locuçêo. Checklist e léxico em <code>references/revisao-texto.md</code>.</p>
 <pre><span class="c"># tela  (camada 2 + caption):  "fez o deploy do funnel"</span>
 <span class="c"># fala  (assets/txt/sN.txt):   "fez o deplói do fânel"</span></pre>
 </div></div>
@@ -238,7 +238,7 @@ assets/txt/s1.txt  assets/txt/s2.txt  ...  assets/txt/sN.txt</pre>
 </div></div>
 <div class="step"><div class="b">8</div><div>
 <h3>Render final nos dois formatos</h3>
-<p>Rebuild + render em cada formato. Como não dá para ouvir o áudio daqui, peça validação da locução ao usuário.</p>
+<p>Rebuild + render em cada formato. Como nêo dá para ouvir o áudio daqui, peça validaçêo da locuçêo ao usuário.</p>
 <pre><span class="k">node build-index.mjs</span>            &amp;&amp; <span class="k">npx hyperframes render</span> --quality high \
   --output <span class="s">renders/&lt;nome&gt;-16x9.mp4</span>
 <span class="k">node build-index.mjs --vertical</span> &amp;&amp; <span class="k">npx hyperframes render</span> --quality high \
@@ -251,19 +251,19 @@ assets/txt/s1.txt  assets/txt/s2.txt  ...  assets/txt/sN.txt</pre>
 <p class="sub">O vídeo "Hormozi 12 dicas" (<code>videos/hormozi-12-dicas/</code>) é a referência funcional de onde a skill foi destilada: 15 cenas narradas com Kokoro, 3 camadas, 16:9 e 9:16, rodando tanto com imagem quanto no fallback SVG. O repo também guarda <code>experiments/remotion-ab/</code>, um teste A/B em nível de código do que a skill <code>remotion-best-practices</code> muda no resultado.</p>
 <div class="ex">
 <figure><img alt="Frame de abertura do vídeo Hormozi 12 dicas — camada cinema com véu escuro" src="assets/ex1.jpg"/><figcaption>Camada 1 (cinema): arte do hook gerada no flux2-klein com seed fixo, recebendo véu + ken-burns no render.</figcaption></figure>
-<figure><img alt="Ilustração de tópico do vídeo Hormozi 12 dicas" src="assets/ex2.jpg"/><figcaption>Camada 3 (ilustração do tópico): a arte de uma das 12 dicas — imagem fiel ao conceito narrado, conferida uma a uma antes de entrar.</figcaption></figure>
+<figure><img alt="Ilustraçêo de tópico do vídeo Hormozi 12 dicas" src="assets/ex2.jpg"/><figcaption>Camada 3 (ilustraçêo do tópico): a arte de uma das 12 dicas — imagem fiel ao conceito narrado, conferida uma a uma antes de entrar.</figcaption></figure>
 </div>
 </div></section>
 <section id="roadmap"><div class="wrap">
 <span class="chip">Roadmap</span>
 <h2>Onde está e para onde vai</h2>
 <p class="sub">A skill está em v0.2.0 e já produz vídeo ponta a ponta com o molde testado. O backlog completo, com as decisões ainda em aberto, vive em <code>docs/06-decisoes-pendentes-e-backlog.md</code>.</p>
-<div class="phase"><div class="tag">Feito</div><div class="d"><strong>v0.1.0 — o molde executável</strong><span>Orquestrador link/assunto → vídeo, autocontido: 3 camadas, imagem padrão com fallback SVG automático, safe zones no 9:16, timing de fonte única via <code>AUDIO[]</code>.</span></div></div>
-<div class="phase"><div class="tag">Feito</div><div class="d"><strong>v0.2.0 — revisão de texto</strong><span>Etapa de revisão entre roteiro e voz: contrato de duas formas por frase (tela × fala) e pronúncia de termos em inglês, fechando o buraco do texto que ia cru para o TTS.</span></div></div>
+<div class="phase"><div class="tag">Feito</div><div class="d"><strong>v0.1.0 — o molde executável</strong><span>Orquestrador link/assunto → vídeo, autocontido: 3 camadas, imagem padrêo com fallback SVG automático, safe zones no 9:16, timing de fonte única via <code>AUDIO[]</code>.</span></div></div>
+<div class="phase"><div class="tag">Feito</div><div class="d"><strong>v0.2.0 — revisêo de texto</strong><span>Etapa de revisêo entre roteiro e voz: contrato de duas formas por frase (tela × fala) e pronúncia de termos em inglês, fechando o buraco do texto que ia cru para o TTS.</span></div></div>
 <div class="phase"><div class="tag">P0</div><div class="d"><strong>Esqueleto da fábrica</strong><span>Contrato único (<code>plano-edicao.json</code> estendido com caption cinético, illustration por beat, duration_mode e assets), integrador de b-roll com cache de seed, compositor dirigido por plano.</span></div></div>
 <div class="phase"><div class="tag">P1</div><div class="d"><strong>Qualidade das camadas 2 e 3</strong><span>Mais componentes de texto cinético (typewriter, char-stagger, count-up), micro-diagramas e spotlight, e um design system único de tokens/eases/ícones.</span></div></div>
-<div class="phase"><div class="tag">P2</div><div class="d"><strong>Acabamento</strong><span>Variedade de transições, light leaks e LUT real, beat-sync musical, formato 1:1, pós-produção e export OpenTimelineIO.</span></div></div>
-<div class="phase"><div class="tag">Aberto</div><div class="d"><strong>Decisões pendentes</strong><span>Motor de render a longo prazo (HyperFrames hoje × Remotion unificado), timing por palavra (forced alignment × estimativa proporcional) e voz padrão.</span></div></div>
+<div class="phase"><div class="tag">P2</div><div class="d"><strong>Acabamento</strong><span>Variedade de transições, light leaks e LUT real, beat-sync musical, formato 1:1, pós-produçêo e export OpenTimelineIO.</span></div></div>
+<div class="phase"><div class="tag">Aberto</div><div class="d"><strong>Decisões pendentes</strong><span>Motor de render a longo prazo (HyperFrames hoje × Remotion unificado), timing por palavra (forced alignment × estimativa proporcional) e voz padrêo.</span></div></div>
 </div></section>
 <footer>
 <div class="wrap">

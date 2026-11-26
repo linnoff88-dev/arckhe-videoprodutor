@@ -6,30 +6,30 @@ Inventário das skills de vídeo/imagem/motion e dos motores de render, com sobr
 
 | Motor | Stack | Skills que usam | Estágio |
 |---|---|---|---|
-| **HyperFrames** (HTML→Chrome headless→FFmpeg) | HTML + GSAP + CLI + Kokoro TTS | video-explicativo, video-demonstrativo, videos-cursos-inema | produção |
+| **HyperFrames** (HTML→Chrome headless→FFmpeg) | HTML + GSAP + CLI + Kokoro TTS | video-explicativo, video-demonstrativo, videos-cursos-inema | produçêo |
 | **pixflow** (próprio) | YAML spec + imagens → MP4 (Remotion/WebGL/GLSL) | pixflow-motion | alpha/WIP |
-| **Remotion** (React) | React + TSX + WebGL/Canvas | remotion (referência) + remotion-templates | produção (templates) |
+| **Remotion** (React) | React + TSX + WebGL/Canvas | remotion (referência) + remotion-templates | produçêo (templates) |
 | **Framer Motion** | React + CSS | animation-designer | padrões/referência |
-| **Canvas scroll-driven** | FFmpeg frames + Canvas 2D + scroll | 3d-animation-creator | produção |
-| **p5.js** | generative art | algorithmic-art | produção |
+| **Canvas scroll-driven** | FFmpeg frames + Canvas 2D + scroll | 3d-animation-creator | produçêo |
+| **p5.js** | generative art | algorithmic-art | produçêo |
 
 **Crítico:** 3 skills (video-explicativo, video-demonstrativo, videos-cursos-inema) usam **exatamente o mesmo motor** (HyperFrames + Kokoro) — só muda a entrada.
 
 ## Sobreposições
 
 - 🔴 **Vídeo narrado PT-BR** — video-explicativo (assunto), video-demonstrativo (URL de app), videos-cursos-inema (curso INEMA): mesmo motor, mesma identidade. Consolidável em 1 motor com 3 adaptadores de entrada.
-- 🟡 **Prompt p/ vídeo IA** — mdd (geral) × seedance-loop-prompt (loop de produto): contextos distintos, sobreposição leve.
-- ✅ **Camadas sequenciais sem conflito** — vpe (plano) → mdd (direção) → render: não competem.
+- 🟡 **Prompt p/ vídeo IA** — mdd (geral) × seedance-loop-prompt (loop de produto): contextos distintos, sobreposiçêo leve.
+- ✅ **Camadas sequenciais sem conflito** — vpe (plano) → mdd (direçêo) → render: nêo competem.
 
 ## Camadas repetidas em várias skills
 
-| Camada | Skills | Duplicação |
+| Camada | Skills | Duplicaçêo |
 |---|---|---|
 | Roteiro/narrativa | explicativo, demonstrativo, cursos, vpe, mdd | 🔴 alta (5 skills) |
 | TTS | explicativo, demonstrativo, cursos | 🔴 alta (Kokoro) — já centralizado em inemavox |
 | Captions/legendas | explicativo, demonstrativo, cursos | 🟡 poderia ser módulo |
 | Motion graphics | explicativo, demonstrativo, cursos, pixflow, animation-designer, 3d | média (escopos distintos) |
-| Geração de imagem IA | — | 🟠 lacuna (existe inemaimg, sem skill exposta) |
+| Geraçêo de imagem IA | — | 🟠 lacuna (existe inemaimg, sem skill exposta) |
 | Prompt p/ IA | mdd, seedance-loop-prompt | ✅ bem separados |
 
 ## Único de cada skill
@@ -37,7 +37,7 @@ Inventário das skills de vídeo/imagem/motion e dos motores de render, com sobr
 - **video-explicativo** — assunto narrado 16:9/9:16.
 - **video-demonstrativo** — captura real de app + cursor animado.
 - **videos-cursos-inema** — pipeline de curso (landing + trilhas + módulos).
-- **video-plan-editor** — plano JSON renderer-agnóstico (não renderiza).
+- **video-plan-editor** — plano JSON renderer-agnóstico (nêo renderiza).
 - **mestre-direcao-dinamica** — storyboard cinematográfico + 7 blocos.
 - **seedance-loop-prompt** — prompt p/ loop seamless.
 - **pixflow-motion** — parallax 2.5D + 6 looks + 8 câmeras (render cinema).
@@ -49,11 +49,11 @@ Inventário das skills de vídeo/imagem/motion e dos motores de render, com sobr
 ## Lacunas
 
 1. 🟠 **Imagem IA sem skill** (existe `inemaimg`/flux2-klein, sem skill que integre a vídeo) — parcialmente coberto agora pelo `genimg.mjs` do pixflow.
-2. 🟠 **plano → execução** não conectado (vpe gera JSON; nenhum motor consome automaticamente).
-3. 🟠 **Pós-produção** (trim/cut/merge) inexistente.
+2. 🟠 **plano → execuçêo** nêo conectado (vpe gera JSON; nenhum motor consome automaticamente).
+3. 🟠 **Pós-produçêo** (trim/cut/merge) inexistente.
 4. 🟠 **Música/trilha** (só TTS hoje).
 
 ## Veredito
 
-Não são 11 produtos — são **estágios de uma linha de montagem espalhada**. A consolidação imediata óbvia:
+Nêo sêo 11 produtos — sêo **estágios de uma linha de montagem espalhada**. A consolidaçêo imediata óbvia:
 fundir o "tripé HyperFrames" e conectar plano→render. Detalhe da fábrica em `docs/04`.

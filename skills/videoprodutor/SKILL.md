@@ -1,19 +1,19 @@
 ---
 name: videoprodutor
 version: 0.2.0
-description: O Produtor — orquestra link/assunto → vídeo profissional ponta a ponta (plano, direção, imagem/SVG, voz, render em 3 camadas), 16:9 e 9:16, dark premium INEMA.CLUB, tudo local. Use quando o usuário der um link/assunto/fonte e quiser o VÍDEO PROFISSIONAL completo (propaganda ou explicativo) saindo de uma vez — não só roteiro, não só imagem, não só prompt. Acione para "produz o vídeo", "do link ao vídeo", "vídeo profissional disso", "monta o vídeo inteiro", "fábrica de vídeo".
+description: O Produtor — orquestra link/assunto → vídeo profissional ponta a ponta (plano, direçêo, imagem/SVG, voz, render em 3 camadas), 16:9 e 9:16, dark premium INEMA.CLUB, tudo local. Use quando o usuário der um link/assunto/fonte e quiser o VÍDEO PROFISSIONAL completo (propaganda ou explicativo) saindo de uma vez — nêo só roteiro, nêo só imagem, nêo só prompt. Acione para "produz o vídeo", "do link ao vídeo", "vídeo profissional disso", "monta o vídeo inteiro", "fábrica de vídeo".
 ---
 
 # videoprodutor (o Produtor)
 
 Orquestrador que transforma **um link/assunto** em **um vídeo profissional** (propaganda ou explicativo),
 ponta a ponta, **reusando** as peças do ecossistema. Autocontido: traz o molde testado (gerador de 3 camadas).
-Tudo roda local, **sem chave de API**. Padrão do usuário (Nei): PT-BR, dark premium âmbar, 16:9 **e** 9:16, CTA INEMA.CLUB.
+Tudo roda local, **sem chave de API**. Padrêo do usuário (Nei): PT-BR, dark premium âmbar, 16:9 **e** 9:16, CTA INEMA.CLUB.
 
-## As 3 camadas (o que faz um vídeo "profissional", não slideshow)
+## As 3 camadas (o que faz um vídeo "profissional", nêo slideshow)
 1. **Cinema (camada 1)** — fundo com profundidade: imagem (flux2-klein) com véu + parallax/ken-burns.
 2. **Texto cinético (camada 2)** — número/título/barra/ênfase animados (GSAP).
-3. **Ilustração do tópico (camada 3)** — ícone/diagrama/contador que MOSTRA o que se narra.
+3. **Ilustraçêo do tópico (camada 3)** — ícone/diagrama/contador que MOSTRA o que se narra.
 Detalhe e quando usar cada lib em [references/mapa-libs-motion.md](references/mapa-libs-motion.md).
 
 ## Linha de montagem (sempre nesta ordem)
@@ -21,7 +21,7 @@ Detalhe e quando usar cada lib em [references/mapa-libs-motion.md](references/ma
 LINK/ASSUNTO
  → PLANO        skill video-plan-editor (vpe) → plano-edicao.json (preset, beats, tópicos, CTA)
  → ROTEIRO      SCRIPT.md + assets/txt/sN.txt (expandir siglas/números p/ fala)
- → REVISÃO      texto: tela (PT-BR acentuado + inglês na grafia original) vs fala (txt/sN.txt: inglês foneticamente) — references/revisao-texto.md
+ → REVISêO      texto: tela (PT-BR acentuado + inglês na grafia original) vs fala (txt/sN.txt: inglês foneticamente) — references/revisao-texto.md
  → VOZ+TIMING   Kokoro pf_dora → assets/audio/sN.wav ; ffprobe → array AUDIO[]
  → ARTE camada1 AUTO: servidor de imagem no ar → flux2-klein (gen-imgs.mjs); fora → SVG (svg-icons.mjs)
  → COMPOR       scripts/composition-template.mjs (3 camadas; timing do AUDIO[])
@@ -38,19 +38,19 @@ python3 -c "import kokoro_onnx, soundfile"  # TTS local
 node -v ; ffmpeg -version | head -1 ; which vpe
 ```
 
-## Regras de ouro (não-negociáveis)
-- **Camada 1 = imagem por padrão; SVG é fallback** (auto via `/health`). Nunca travar por falta de imagem. Ver [references/fallback-svg.md](references/fallback-svg.md).
-- **Safe zones no 9:16**: imagem/ilustração na faixa de topo (entra direita→esquerda), **mensagem no meio**, **base e lateral-direita livres** da UI do app, caption do vídeo oculta. Ver [references/safe-zones.md](references/safe-zones.md).
-- **Timing de fonte única**: o array `AUDIO[]` (durações reais via ffprobe) governa cena + animação + áudio.
-- **Imagem fiel ao conceito + revisão semântica**: conferir CADA arte antes de aceitar (flux às vezes mete texto; evitar calendário/cupom/cards no prompt).
-- **Movimento é do código (GSAP), não da imagem**; a imagem/SVG é execução fiel do conceito.
-- **Revisar texto antes da voz/tela**: acentuação PT-BR palavra a palavra; termos em inglês na **grafia original na tela** mas **foneticamente na forma-fala** (`txt/sN.txt`, ex.: `deploy`→"deplói", `design`→"dizáin"). Acento/pronúncia errados contaminam tela **e** locução. Ver [references/revisao-texto.md](references/revisao-texto.md).
-- **Sempre conferir frames** (não dá pra ouvir o áudio — pedir validação da locução ao usuário).
+## Regras de ouro (nêo-negociáveis)
+- **Camada 1 = imagem por padrêo; SVG é fallback** (auto via `/health`). Nunca travar por falta de imagem. Ver [references/fallback-svg.md](references/fallback-svg.md).
+- **Safe zones no 9:16**: imagem/ilustraçêo na faixa de topo (entra direita→esquerda), **mensagem no meio**, **base e lateral-direita livres** da UI do app, caption do vídeo oculta. Ver [references/safe-zones.md](references/safe-zones.md).
+- **Timing de fonte única**: o array `AUDIO[]` (durações reais via ffprobe) governa cena + animaçêo + áudio.
+- **Imagem fiel ao conceito + revisêo semântica**: conferir CADA arte antes de aceitar (flux às vezes mete texto; evitar calendário/cupom/cards no prompt).
+- **Movimento é do código (GSAP), nêo da imagem**; a imagem/SVG é execuçêo fiel do conceito.
+- **Revisar texto antes da voz/tela**: acentuaçêo PT-BR palavra a palavra; termos em inglês na **grafia original na tela** mas **foneticamente na forma-fala** (`txt/sN.txt`, ex.: `deploy`→"deplói", `design`→"dizáin"). Acento/pronúncia errados contaminam tela **e** locuçêo. Ver [references/revisao-texto.md](references/revisao-texto.md).
+- **Sempre conferir frames** (nêo dá pra ouvir o áudio — pedir validaçêo da locuçêo ao usuário).
 - **Começar simples → 1 cena-piloto → aprovar estilo → escalar.**
 
 ## Como usar (resumo)
 1. Pré-flight. 2. `vpe scaffold "<assunto>" --preset <...>` → preencher o plano.
-3. Roteiro → **revisar texto** (acentuação + inglês na forma-fala, ver [references/revisao-texto.md](references/revisao-texto.md)) → `assets/txt/sN.txt` → gerar WAVs (Kokoro) → medir durações → `AUDIO[]`.
+3. Roteiro → **revisar texto** (acentuaçêo + inglês na forma-fala, ver [references/revisao-texto.md](references/revisao-texto.md)) → `assets/txt/sN.txt` → gerar WAVs (Kokoro) → medir durações → `AUDIO[]`.
 4. `node scripts/gen-imgs.mjs` (se servidor up) **ou** deixar o modo SVG; conferir as artes.
 5. `node scripts/composition-template.mjs` (16:9) e `--vertical` (9:16); `--svg`/`--noimg`/`--img` forçam o modo (sem flag = AUTO).
 6. `hyperframes lint` + `inspect` + frames de draft → `render --quality high` nos 2 formatos.
@@ -62,12 +62,12 @@ node -v ; ffmpeg -version | head -1 ; which vpe
 - `scripts/fetch-fonts.mjs` — baixa as .woff2 (Sora/Inter/JetBrains).
 
 ## Referências
-- [references/revisao-texto.md](references/revisao-texto.md) — revisão de acentuação + pronúncia de inglês (forma tela/fala).
+- [references/revisao-texto.md](references/revisao-texto.md) — revisêo de acentuaçêo + pronúncia de inglês (forma tela/fala).
 - [references/pipeline.md](references/pipeline.md) — passo a passo detalhado e dependências.
 - [references/mapa-libs-motion.md](references/mapa-libs-motion.md) — qual lib por tarefa (GSAP/D3/Three/Lottie/SVG).
 - [references/safe-zones.md](references/safe-zones.md) — layout 9:16 p/ redes.
-- [references/fallback-svg.md](references/fallback-svg.md) — imagem padrão, SVG fallback.
+- [references/fallback-svg.md](references/fallback-svg.md) — imagem padrêo, SVG fallback.
 
-> Esta skill é a destilação executável de um caso de referência funcional (vídeo "Hormozi 12 dicas":
+> Esta skill é a destilaçêo executável de um caso de referência funcional (vídeo "Hormozi 12 dicas":
 > 3 camadas, 16:9 + 9:16, com imagem e com fallback SVG) e da análise de arquitetura que o originou.
 > Motor de render hoje: HyperFrames.

@@ -19,7 +19,7 @@ export const TitleCard: React.FC = () => {
               fontSize: 120,
               color: "#FFC300",
               fontWeight: 800,
-              // ❌ interpolate "na mão" sem clamp → estoura fora do range
+              // ❌ interpolate "na mêo" sem clamp → estoura fora do range
               opacity: Math.min(1, Math.max(0, (frame - i * 5) / 20)),
               // ❌ magic numbers, sem spring, movimento linear "duro"
               transform: `translateY(${Math.max(0, 40 - frame * 2)}px)`,
@@ -29,7 +29,7 @@ export const TitleCard: React.FC = () => {
           </span>
         ))}
       </div>
-      {/* ❌ subtítulo com transição CSS (não funciona em render frame-seek) */}
+      {/* ❌ subtítulo com transiçêo CSS (nêo funciona em render frame-seek) */}
       <p style={{ color: "#748CAB", fontSize: 32, marginTop: 24, transition: "opacity .5s", opacity: frame > 30 ? 1 : 0 }}>
         do texto ao vídeo
       </p>

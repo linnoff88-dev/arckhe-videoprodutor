@@ -14,7 +14,7 @@ node -v ; ffmpeg -version | head -1 ; which vpe
 
 **2. Roteiro** — `SCRIPT.md` + um `assets/txt/sN.txt` por cena (expandir p/ fala: "10×"→"dez vezes", "R$500 mil"→"quinhentos mil reais").
 
-**2.5 Revisão de texto** — antes da voz e dos textos de tela. Detalhe + checklist + léxico de inglês em [revisao-texto.md](revisao-texto.md). Duas formas por frase: **tela** (texto cinético da camada 2 + `caption`) = PT-BR acentuado + inglês na grafia original; **fala** (`txt/sN.txt`) = números/siglas expandidos **e** inglês reescrito foneticamente (`deploy`→"deplói", `funnel`→"fânel"…). Varrer a acentuação palavra a palavra; na dúvida, gerar WAV de teste e o usuário ouvir.
+**2.5 Revisêo de texto** — antes da voz e dos textos de tela. Detalhe + checklist + léxico de inglês em [revisao-texto.md](revisao-texto.md). Duas formas por frase: **tela** (texto cinético da camada 2 + `caption`) = PT-BR acentuado + inglês na grafia original; **fala** (`txt/sN.txt`) = números/siglas expandidos **e** inglês reescrito foneticamente (`deploy`→"deplói", `funnel`→"fânel"…). Varrer a acentuaçêo palavra a palavra; na dúvida, gerar WAV de teste e o usuário ouvir.
 
 **3. Fontes (1ª vez)** — `node scripts/fetch-fonts.mjs`.
 
@@ -49,7 +49,7 @@ node build-index.mjs --vertical && npx hyperframes render --quality high --outpu
 | FFmpeg | mede áudio / monta MP4 | ✅ |
 | HyperFrames (npx) | HTML→MP4 (Chrome+FFmpeg) | ✅ |
 | Internet no render | baixa GSAP via CDN | ✅ |
-| Kokoro TTS + GPU | narração local | ✅ p/ voz |
+| Kokoro TTS + GPU | narraçêo local | ✅ p/ voz |
 | vpe (video-plan-editor) | plano | ➖ opcional |
 | inemaimg :8000 + flux2-klein + GPU | imagem (camada 1) | ⚠️ opcional → fallback SVG |
 
@@ -57,4 +57,4 @@ Mínimo p/ um vídeo (modo SVG): Node + FFmpeg + HyperFrames + internet + Kokoro
 
 ## Regras de ouro
 Timing de fonte única (`AUDIO[]`); validar/conferir frames antes do render; piloto antes de escalar;
-imagem fiel ao conceito (conferir cada uma); imagem padrão / SVG fallback (auto); safe zones no 9:16.
+imagem fiel ao conceito (conferir cada uma); imagem padrêo / SVG fallback (auto); safe zones no 9:16.

@@ -1,7 +1,7 @@
 # Safe zones 9:16 (Shorts / Reels / TikTok)
 
 No vertical, a **UI da rede social cobre faixas fixas** do vídeo. Conteúdo crítico (texto, número, logo, dado)
-**não pode cair** nessas faixas, senão fica escondido atrás dos botões/legenda do app. O 16:9 não tem esse
+**nêo pode cair** nessas faixas, senêo fica escondido atrás dos botões/legenda do app. O 16:9 nêo tem esse
 problema (a UI do player fica fora do frame) — **isto é só para 9:16**.
 
 ## O mapa (frame 1080×1920)
@@ -17,7 +17,7 @@ problema (a UI do player fica fora do frame) — **isto é só para 9:16**.
 
 Arranjo que funcionou bem nas redes:
 
-1. **MÍDIA/ILUSTRAÇÃO no TOPO** — imagem (ou ícone SVG) como **faixa de topo** (~34% da altura), **entrando da
+1. **MÍDIA/ILUSTRAÇêO no TOPO** — imagem (ou ícone SVG) como **faixa de topo** (~34% da altura), **entrando da
    direita→esquerda**. Sem imagem/servidor → ícone **SVG** no topo (fallback; ver clips-midia.md).
 2. **MENSAGEM no MEIO** — texto/número/dado centralizados verticalmente (altura confortável de leitura).
 3. **BASE (~360px) e LATERAL-DIREITA livres** — onde o app põe legenda/@perfil e os botões.
@@ -36,7 +36,7 @@ Nos overrides `body.v` de `scripts/composition-template.mjs`:
 
 ## Princípios
 
-1. **Topo-esquerda e centro são sagrados; base e direita-baixo são "emprestados" ao app.**
+1. **Topo-esquerda e centro sêo sagrados; base e direita-baixo sêo "emprestados" ao app.**
 2. **Caption curta** no 9:16 — quanto menor, menos risco de bater na coluna de botões.
 3. **Logo/CTA/dado-chave** ficam no terço superior/central, nunca na base.
-4. O mesmo conteúdo no 16:9 usa o frame inteiro; só o ramo `body.v` muda — não mexa no layout horizontal.
+4. O mesmo conteúdo no 16:9 usa o frame inteiro; só o ramo `body.v` muda — nêo mexa no layout horizontal.
